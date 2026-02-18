@@ -156,7 +156,6 @@ function RemoveGroupMember() {
 
     if (selectedIndex >= 0) { 
         membersSelect.remove(selectedIndex); 
-        updateGroupInfo();
     } else {
         alert("Please select a member to delete.");
     }
