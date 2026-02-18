@@ -151,12 +151,12 @@ function AddGroupMember(lastName, firstName) {
 * 
 */
 function RemoveGroupMember() {
-    const membersSelect = document.getElementById("members"); // get the select list
-    const selectedIndex = membersSelect.selectedIndex;        // get selected option
+    const membersSelect = document.getElementById("members"); 
+    const selectedIndex = membersSelect.selectedIndex;        
 
-    if (selectedIndex >= 0) { // ensure something is selected
-        membersSelect.remove(selectedIndex); // remove the selected member
-        updateGroupInfo(); // recalculate group size and discounted rate
+    if (selectedIndex >= 0) { 
+        membersSelect.remove(selectedIndex); 
+        updateGroupInfo();
     } else {
         alert("Please select a member to delete.");
     }
