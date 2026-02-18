@@ -7,8 +7,8 @@ Instructor: Washington Valencia
 ENTER STUDENT INFORMATION HERE 
 ==========================================
 CCTB project DevOps course
-STUDENT NAME: 
-STUDENT ID:
+STUDENT NAME: Guilherme dos Santos Araujo
+STUDENT ID: CT1010603
 SQAC114
 ==========================================
 
@@ -151,10 +151,17 @@ function AddGroupMember(lastName, firstName) {
 * 
 */
 function RemoveGroupMember() {
+    const membersSelect = document.getElementById("members"); // get the select list
+    const selectedIndex = membersSelect.selectedIndex;        // get selected option
 
-	throw "ERROR! You must work in this function before to send to Staging Environment!";
-
+    if (selectedIndex >= 0) { // ensure something is selected
+        membersSelect.remove(selectedIndex); // remove the selected member
+        updateGroupInfo(); // recalculate group size and discounted rate
+    } else {
+        alert("Please select a member to delete.");
+    }
 }
+
 
 /*
 * Function to sort the list of group members in ascending order by last name.
